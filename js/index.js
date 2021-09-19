@@ -7,14 +7,14 @@ const gameStart = {
     key: 'gameStart',
     preload: function () {
 
-        this.load.image('bg1', '/images/bg/bg1_1.png');
-        this.load.image('bg2', '/images/bg/bg2_1.png');
-        this.load.image('bg3', '/images/bg/bg3_1.png');
-        this.load.image('bg4', '/images/bg/bg4_1.png');
-        this.load.image('footer', '/images/bg/footer_1.png');
+        this.load.image('bg1', 'images/bg/bg1_1.png');
+        this.load.image('bg2', 'images/bg/bg2_1.png');
+        this.load.image('bg3', 'images/bg/bg3_1.png');
+        this.load.image('bg4', 'images/bg/bg4_1.png');
+        this.load.image('footer', 'images/bg/footer_1.png');
 
-        this.load.image('logo', '/images/ui/title.png');
-        this.load.image('startBtn', '/images/ui/startbtn.png');
+        this.load.image('logo', 'images/ui/title.png');
+        this.load.image('startBtn', 'images/ui/startbtn.png');
 
     },
     // 加入遊戲物件與相關設定
@@ -28,14 +28,8 @@ const gameStart = {
         this.bg2 = this.add.tileSprite(w / 2, h / 2, w, h, 'bg2');
         this.bg1 = this.add.tileSprite(w / 2, h / 2, w, h, 'bg1');
         this.footer = this.add.tileSprite(w / 2, 405, w, 90, 'footer');
-
-        // this.playerEnd = this.add.image(w / 2, 310, 'playerEnd');
-        // this.playerEnd.setScale(0.5);
         this.logo = this.add.image(w / 2, h / 2, 'logo');
-
         this.startBtn = this.add.image(w / 2, h / 2, 'startBtn');
-
-
         this.input.keyboard.on('keydown-SPACE', () => {
             this.scene.start('gamePlay');
         });
@@ -63,26 +57,24 @@ const gamePlay = {
     preload: function () {
         // 圖片
         // 背景
-        this.load.image('bg1', '/images/bg/bg1_1.png');
-        this.load.image('bg2', '/images/bg/bg2_1.png');
-        this.load.image('bg3', '/images/bg/bg3_1.png');
-        this.load.image('bg4', '/images/bg/bg4_1.png');
-        this.load.image('footer', '/images/bg/footer_1.png');
+        this.load.image('bg1', 'images/bg/bg1_1.png');
+        this.load.image('bg2', 'images/bg/bg2_1.png');
+        this.load.image('bg3', 'images/bg/bg3_1.png');
+        this.load.image('bg4', 'images/bg/bg4_1.png');
+        this.load.image('footer', 'images/bg/footer_1.png');
         // 載入音效
-        this.load.audio('jump12', '/audio/jump12.mp3');
-        this.load.audio('touch', '/audio/touch.mp3');
-        // jumpBtn
-        // this.load.image('btnJump', '../images/ui/btn-jump.png');
+        this.load.audio('jump12', 'audio/jump12.mp3');
+        this.load.audio('touch', 'audio/touch.mp3');
         // monster
-        this.load.image('rock1', '/images/showman.png');
-        this.load.image('rock2', '/images/showman.png');
-        this.load.image('rock3', '/images/showman.png');
+        this.load.image('rock1', 'images/showman.png');
+        this.load.image('rock2', 'images/showman.png');
+        this.load.image('rock3', 'images/showman.png');
         // 遊戲結束後的標題
-        this.load.image('gameOver', '/images/ui/gameover.png');
-        this.load.image('tryAgain', '/images/ui/tryagain.png');
-        this.load.image('backMenu', '/images/ui/backmenu.png');
+        this.load.image('gameOver', 'images/ui/gameover.png');
+        this.load.image('tryAgain', 'images/ui/tryagain.png');
+        this.load.image('backMenu', 'images/ui/backmenu.png');
         // 腳色動畫
-        this.load.spritesheet('user', '/images/f_player.png', { frameWidth: 144, frameHeight: 120 });
+        this.load.spritesheet('user', 'images/f_player.png', { frameWidth: 144, frameHeight: 120 });
 
         // 時間
         this.timeInt = 0;
