@@ -179,15 +179,15 @@ const gamePlay = {
             this.backMenu = this.add.image(w / 2, h / 2, 'backMenu');
             this.tryAgain = this.add.image(w / 2, h / 2, 'tryAgain');
 
-            this.backMenu.setInteractive();
-            this.backMenu.on('pointerdown', () => {
-                window.location.href += gameURL;
-            });
+        //    this.backMenu.setInteractive();
+           // this.backMenu.on('pointerdown', () => {
+           //     window.location.href += gameURL;
+         //   });
 
-            this.tryAgain.setInteractive();
-            this.tryAgain.on('pointerdown', () => {
-                window.location.href += gameURL;
-            });
+         //   this.tryAgain.setInteractive();
+        //    this.tryAgain.on('pointerdown', () => {
+          //      window.location.href += gameURL;
+       //     });
 
             this.sound.stopAll();
             //sorceInt = 0;
